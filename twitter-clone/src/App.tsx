@@ -1,11 +1,12 @@
 import React from 'react';
 import { CreateGlobalStyles } from './styles/GlobalStyles';
+import Layout from './components/Layout';
 
 
 function App() {
   return (
     <React.Fragment>
-      <h1>App</h1>
+      <Layout />
       <CreateGlobalStyles />
     </React.Fragment>
   );
