@@ -1,5 +1,15 @@
 import React from "react";
-import { Container, Header, BackIcon, ProfileInfo } from "./style";
+import { 
+    Container, 
+    Header, 
+    BackIcon, 
+    ProfileInfo, 
+    BottomMenu,
+    HomeIcon,
+    SearchIcon,
+    BellIcon,
+    EmailIcon
+ } from "./style";
 
 export const Main: React.FC = () => {
     return (
@@ -13,6 +23,13 @@ export const Main: React.FC = () => {
                     <span>44 new Tweets</span>
                 </ProfileInfo>
             </Header>
+
+            <BottomMenu>
+                <HomeIcon />
+                <SearchIcon />
+                <BellIcon className="active"/>
+                <EmailIcon />
+            </BottomMenu>
         </Container>
     )
 };

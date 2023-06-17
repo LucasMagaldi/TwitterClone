@@ -1,5 +1,15 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ArrowLeft } from "styled-icons/heroicons-solid";
+import {
+    Home,
+    Notifications,
+    Email,
+    FavoriteBorder,
+    ExitToApp,
+    LocationOn,
+    Search,
+} from 'styled-icons/material-outlined';
+
 
 export const Container = styled.div`
     display: flex;
@@ -60,3 +70,51 @@ export const ProfileInfo = styled.div`
         color: var(--gray);
     }
 `
+
+export const BottomMenu = styled.div`
+    position: fixed;
+    bottom: 0;
+    left:0;
+    z-index:2;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid var(--outline);
+
+    padding: 8px;
+
+    @media (min-width: 500px) {
+        display: none;
+    }
+`;
+
+export const iconCSS = css`
+    width: 31px;
+    height: 31px;
+
+    cursor: pointer;
+
+    fill: var(--gray);
+
+    &:hover,
+    &.active {
+        fill: var(--twitter)
+    };
+`;
+
+export const HomeIcon = styled(Home)`
+    ${iconCSS};
+`;
+
+export const SearchIcon = styled(Search)`
+  ${iconCSS}
+`;
+export const BellIcon = styled(Notifications)`
+  ${iconCSS}
+`;
+export const EmailIcon = styled(Email)`
+  ${iconCSS}
+`;
