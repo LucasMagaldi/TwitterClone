@@ -10,6 +10,7 @@ import {
     BellIcon,
     EmailIcon
  } from "./style";
+import { ProfilePage } from "../ProfilePage";
 
 export const Main: React.FC = () => {
     return (
@@ -23,6 +24,8 @@ export const Main: React.FC = () => {
                     <span>44 new Tweets</span>
                 </ProfileInfo>
             </Header>
+
+            <ProfilePage />
 
             <BottomMenu>
                 <HomeIcon />
