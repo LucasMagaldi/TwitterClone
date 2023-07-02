@@ -1,6 +1,9 @@
 import styled, { css } from "styled-components";
 import { Button } from "../Generic/Button";
 
+import { LocationOn } from "styled-icons/material-outlined";
+import { Cake } from "styled-icons/material";
+
 
 export const Container = styled.div`
     display: flex;
@@ -96,3 +99,33 @@ export const EditButton = styled(Button)`
         font-size: 15px;
     }
 `;
+
+const iconCSS = css`
+    width:20px;
+    height: 20px;
+
+    color: var(--gray);
+`;
+
+export const LocationIcon = styled(LocationOn)`
+    ${iconCSS};
+`;
+
+export const CakeIcon = styled(Cake)`
+    ${iconCSS};
+`;
+
+export const Followage = styled.div`
+    display: flex;
+
+    > span {
+        font-size: 15px;
+        color: var(--gray);
+
+        cursor: pointer;
+
+        & + span {
+            margin-left: 20px;
+        }
+    }
+`
